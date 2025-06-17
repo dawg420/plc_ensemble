@@ -1,0 +1,13 @@
+models/saved_models/
+models/saved_models_backup/
+**/__init__.py
+__pycache__/**
+__pycache__/
+*/__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.csv
+*.pkl
+*.safetensors

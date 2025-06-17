@@ -1,0 +1,26 @@
+{
+  "active_requests": {},
+  "model_status": {
+    "hmm": {
+      "status": "active",
+      "last_seen": 1750158379.2271411
+    },
+    "xgboost": {
+      "status": "active",
+      "last_seen": 1750158379.2465048
+    },
+    "random_forest": {
+      "status": "active",
+      "last_seen": 1750158379.2624676
+    },
+    "llm": {
+      "status": "active",
+      "last_seen": 1750158378.530834
+    },
+    "lstm": {
+      "status": "active",
+      "last_seen": 1750158378.2601235
+    }
+  },
+  "performance_history": []
+}
