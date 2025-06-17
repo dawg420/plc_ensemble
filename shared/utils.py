@@ -89,15 +89,15 @@ def state_to_values_only(holding_registers, coils):
 
 def values_to_prediction_state(predicted_values, current_state, current_time):
     """
-    Convert predicted values to state with proper temporal metadata
+    FIXED: Convert predicted values to state with proper temporal metadata
     
     Args:
         predicted_values: List of 58 values (39 registers + 19 coils)
         current_state: Current state dict with temporal info
-        current_time: Current time index
+        current_time: Current time index (no longer used - real time handled elsewhere)
     
     Returns:
-        State dict with values and updated temporal metadata
+        State dict with values and UNCHANGED temporal metadata
     """
     new_state = {
         "holding_registers": {},
@@ -109,42 +109,24 @@ def values_to_prediction_state(predicted_values, current_state, current_time):
         predicted_value = max(0, int(round(predicted_values[i])))
         current_reg = current_state["holding_registers"][i]
         
-        # Check if value changed
-        if predicted_value != current_reg["value"]:
-            # Value changed - update temporal info
-            new_state["holding_registers"][i] = {
-                "value": predicted_value,
-                "last_changed": current_time,
-                "change_count": current_reg["change_count"] + 1
-            }
-        else:
-            # Value unchanged - keep existing temporal info
-            new_state["holding_registers"][i] = {
-                "value": predicted_value,
-                "last_changed": current_reg["last_changed"],
-                "change_count": current_reg["change_count"]
-            }
+        # FIXED: Don't update temporal metadata here - that's handled by TemporalStateManager
+        new_state["holding_registers"][i] = {
+            "value": predicted_value,
+            "last_changed": current_reg["last_changed"],
+            "change_count": current_reg["change_count"]
+        }
     
     # Process coils (next 19 values)
     for i in range(19):
         predicted_value = max(0, min(1, int(round(predicted_values[39 + i]))))
         current_coil = current_state["coils"][i]
         
-        # Check if value changed
-        if predicted_value != current_coil["value"]:
-            # Value changed - update temporal info
-            new_state["coils"][i] = {
-                "value": predicted_value,
-                "last_changed": current_time,
-                "change_count": current_coil["change_count"] + 1
-            }
-        else:
-            # Value unchanged - keep existing temporal info
-            new_state["coils"][i] = {
-                "value": predicted_value,
-                "last_changed": current_coil["last_changed"],
-                "change_count": current_coil["change_count"]
-            }
+        # FIXED: Don't update temporal metadata here - that's handled by TemporalStateManager
+        new_state["coils"][i] = {
+            "value": predicted_value,
+            "last_changed": current_coil["last_changed"],
+            "change_count": current_coil["change_count"]
+        }
     
     return new_state
 
@@ -229,6 +211,54 @@ def calculate_state_accuracy(expected_state, predicted_state, zero_weight=0.1, n
             matched_weight += weight
 
     return matched_weight / total_weight if total_weight > 0 else 0.0
+
+def weighted_register_similarity(expected_state, predicted_state, zero_weight=0.1, nonzero_weight=1.0):
+    """Calculate weighted similarity where non-zero values have higher importance."""
+    total_weight = 0
+    matched_weight = 0
+
+    # Check holding registers
+    for i in range(39):
+        expected_val = expected_state.get("holding_registers", {}).get(i, 0)
+        predicted_val = predicted_state.get("holding_registers", {}).get(i, 0)
+
+        weight = zero_weight if expected_val == 0 else nonzero_weight
+        total_weight += weight
+
+        if expected_val == predicted_val:
+            matched_weight += weight
+
+    # Check coils
+    for i in range(19):
+        expected_val = expected_state.get("coils", {}).get(i, 0)
+        predicted_val = predicted_state.get("coils", {}).get(i, 0)
+
+        weight = zero_weight if expected_val == 0 else nonzero_weight
+        total_weight += weight
+
+        if expected_val == predicted_val:
+            matched_weight += weight
+
+    return matched_weight / total_weight if total_weight > 0 else 0.0
+
+def register_similarity(expected_state, predicted_state):
+    """Calculate similarity based on register and coil values."""
+    total_registers = 39 + 19
+    correct_registers = 0
+
+    for i in range(39):
+        expected_val = expected_state.get("holding_registers", {}).get(i, 0)
+        predicted_val = predicted_state.get("holding_registers", {}).get(i, 0)
+        if expected_val == predicted_val:
+            correct_registers += 1
+
+    for i in range(19):
+        expected_val = expected_state.get("coils", {}).get(i, 0)
+        predicted_val = predicted_state.get("coils", {}).get(i, 0)
+        if expected_val == predicted_val:
+            correct_registers += 1
+
+    return correct_registers / total_registers
 
 def format_state_for_display(state_dict):
     """Format state for console display"""

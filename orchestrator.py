@@ -1,13 +1,15 @@
 # orchestrator.py
 """
-Main Ensemble Orchestrator
-Coordinates all models and provides the final ensemble predictions
+Updated Ensemble Orchestrator with real-time temporal tracking
 """
 
 import time
 import threading
 import signal
 import sys
+import copy
+import pandas as pd
+import numpy as np
 from pathlib import Path
 from typing import Dict, List, Optional
 import subprocess
@@ -16,24 +18,31 @@ import json
 # Local imports
 from shared.state_store import StateStore, generate_state_output_summary, enhanced_to_display_state
 from shared.consensus import AdaptiveConsensus, select_consensus_method
+from shared.temporal_state import TemporalStateManager
 from shared.utils import (
     format_state_for_display, 
     log_ensemble_event, 
     create_test_state,
     calculate_state_accuracy,
+    parse_state_summary,
+    update_state_with_transaction,
+    weighted_register_similarity,
+    register_similarity,
     ENSEMBLE_CONFIG
 )
 
 class EnsembleOrchestrator:
-    """Main orchestrator for the ensemble prediction system"""
+    """Main orchestrator for the ensemble prediction system with temporal tracking"""
     
     def __init__(self, store_path="shared_state.json"):
         self.store = StateStore(store_path)
         self.consensus_engine = AdaptiveConsensus()
+        self.temporal_manager = TemporalStateManager()
         self.is_running = False
         self.prediction_count = 0
         self.model_processes = {}
         self.cleanup_thread = None
+        self.current_state = None
         
         # Performance tracking
         self.ensemble_history = []
@@ -49,7 +58,7 @@ class EnsembleOrchestrator:
         signal.signal(signal.SIGINT, self._signal_handler)
         signal.signal(signal.SIGTERM, self._signal_handler)
         
-        log_ensemble_event("STARTUP", "Ensemble Orchestrator initialized")
+        log_ensemble_event("STARTUP", "Ensemble Orchestrator initialized with temporal tracking")
     
     def _signal_handler(self, signum, frame):
         """Handle shutdown signals gracefully"""
@@ -84,25 +93,19 @@ class EnsembleOrchestrator:
     
     def _start_llm_service(self, config):
         """Start LLM service in separate process"""
-        cmd = [
-            sys.executable, "models/llm_predictor.py"
-        ]
+        cmd = [sys.executable, "models/llm_predictor.py"]
         process = subprocess.Popen(cmd, cwd=Path.cwd())
         self.model_processes["llm"] = process
     
     def _start_hmm_service(self, config):
         """Start HMM service in separate process"""
-        cmd = [
-            sys.executable, "models/hmm_predictor.py"
-        ]
+        cmd = [sys.executable, "models/hmm_predictor.py"]
         process = subprocess.Popen(cmd, cwd=Path.cwd())
         self.model_processes["hmm"] = process
     
     def _start_ml_service(self, model_name, config):
         """Start ML service in separate process"""
-        cmd = [
-            sys.executable, "models/ml_predictors.py", model_name
-        ]
+        cmd = [sys.executable, "models/ml_predictors.py", model_name]
         if "model_path" in config:
             cmd.extend(["--model_path", config["model_path"]])
         
@@ -124,16 +127,7 @@ class EnsembleOrchestrator:
         log_ensemble_event("STARTUP", "Cleanup thread started")
     
     def predict_next_state(self, current_state: Dict, timeout: float = None) -> Dict:
-        """
-        Main ensemble prediction method
-        
-        Args:
-            current_state: Enhanced state dictionary with temporal info
-            timeout: Maximum time to wait for predictions (default: from config)
-            
-        Returns:
-            Dictionary with consensus prediction and metadata
-        """
+        """Main ensemble prediction method"""
         if timeout is None:
             timeout = ENSEMBLE_CONFIG["max_prediction_timeout"]
         
@@ -155,11 +149,6 @@ class EnsembleOrchestrator:
                 active_models = self.store.get_active_models()
                 received_count = len(predictions)
                 expected_count = len(active_models)
-                
-                # Log progress
-                if poll_count % 5 == 0:  # Every second
-                    log_ensemble_event("POLLING", 
-                        f"Received {received_count}/{expected_count} predictions", request_id)
                 
                 # Check if we have enough predictions
                 min_models = max(1, ENSEMBLE_CONFIG["min_models_for_consensus"])
@@ -297,6 +286,225 @@ class EnsembleOrchestrator:
         if len(self.ensemble_history) > max_history:
             self.ensemble_history = self.ensemble_history[-max_history:]
     
+    def initialize_demo_state(self, scenario="normal"):
+        """Initialize demo with proper temporal tracking"""
+        scenarios = {
+            "normal": {
+                "holding_registers": {0: 100, 1: 50, 5: 75},
+                "coils": {0: 1, 2: 1}
+            },
+            "complex": {
+                "holding_registers": {i: (i * 10) % 100 for i in range(10)},
+                "coils": {i: i % 2 for i in range(8)}
+            },
+            "sparse": {
+                "holding_registers": {15: 200, 30: 150},
+                "coils": {10: 1, 18: 1}
+            }
+        }
+        
+        scenario_data = scenarios.get(scenario, scenarios["normal"])
+        self.current_state = self.temporal_manager.create_initial_state(
+            scenario_data["holding_registers"],
+            scenario_data["coils"]
+        )
+        
+        print(f"🚀 Initialized '{scenario}' scenario with proper temporal tracking")
+        self._print_state_summary()
+        return self.current_state
+    
+    def predict_next_state_with_temporal_update(self, delay_seconds=None):
+        """Make prediction with proper time advancement"""
+        if self.current_state is None:
+            raise ValueError("No current state. Call initialize_demo_state() first.")
+        
+        # Optional: simulate time delay for testing
+        if delay_seconds:
+            time.sleep(delay_seconds)
+            print(f"⏰ Simulated {delay_seconds} second delay")
+        
+        # Step 1: Advance time for all registers/coils
+        print("⏳ Advancing time for all registers/coils...")
+        time_advanced_state = self.temporal_manager.advance_time_for_prediction(self.current_state)
+        
+        # Step 2: Get ensemble prediction (existing logic)
+        print("🤖 Getting ensemble predictions...")
+        enhanced_state = self.temporal_manager.convert_to_enhanced_format(time_advanced_state)
+        prediction_result = self.predict_next_state(enhanced_state)
+        consensus_prediction = prediction_result["consensus_state"]
+        
+        # Step 3: Apply consensus changes with proper temporal updates
+        print("📊 Applying consensus changes...")
+        self.current_state = self.temporal_manager.apply_consensus_changes(
+            time_advanced_state, consensus_prediction
+        )
+        
+        # Step 4: Show results
+        self._print_state_summary()
+        self._print_prediction_metadata(prediction_result["metadata"])
+        
+        return self.current_state
+    
+    def evaluate_ensemble_on_test_data(self, dataset_path="modbus_output_with_time.csv", 
+                                     test_rows=1000):
+        """Evaluate ensemble accuracy on last N rows of dataset"""
+        print(f"\n🔍 ENSEMBLE EVALUATION ON TEST DATA")
+        print("=" * 60)
+        print(f"Dataset: {dataset_path}")
+        print(f"Test rows: {test_rows}")
+        
+        # Load dataset
+        try:
+            df = pd.read_csv(dataset_path)
+        except FileNotFoundError:
+            print(f"❌ Dataset not found: {dataset_path}")
+            return None
+        
+        # Use last N rows as test set
+        test_df = df.tail(test_rows).reset_index(drop=True)
+        train_df = df.iloc[:-test_rows]
+        
+        print(f"📊 Total rows: {len(df)}")
+        print(f"Training rows: {len(train_df)}")
+        print(f"Test rows: {len(test_df)}")
+        
+        # Initialize state from training data
+        holding_registers = {i: {"value": 0, "last_changed": 0, "change_count": 0} for i in range(39)}
+        coils = {i: {"value": 0, "last_changed": 0, "change_count": 0} for i in range(19)}
+        
+        print("Processing training data to get correct starting state...")
+        for idx, row in train_df.iterrows():
+            update_state_with_transaction(row, idx, holding_registers, coils)
+        
+        # Evaluation on test set
+        print("Starting ensemble evaluation on test set...")
+        results = []
+        total_register_similarity = 0.0
+        total_weighted_similarity = 0.0
+        exact_match_count = 0
+        
+        for idx, row in test_df.iterrows():
+            if idx % 100 == 0:
+                print(f"  Processed {idx}/{len(test_df)} test samples...")
+            
+            # Current state
+            current_state = {
+                "holding_registers": copy.deepcopy(holding_registers),
+                "coils": copy.deepcopy(coils)
+            }
+            
+            # Update to get expected next state
+            update_state_with_transaction(row, len(train_df) + idx, holding_registers, coils)
+            expected_next_state = {
+                "holding_registers": copy.deepcopy(holding_registers),
+                "coils": copy.deepcopy(coils)
+            }
+            
+            # Convert to enhanced format for ensemble
+            enhanced_current_state = self.store.create_enhanced_state(
+                current_state["holding_registers"],
+                current_state["coils"],
+                current_time=len(train_df) + idx
+            )
+            
+            # Get ensemble prediction
+            try:
+                prediction_result = self.predict_next_state(enhanced_current_state, timeout=5.0)
+                predicted_state = prediction_result["consensus_state"]
+                agreement_score = prediction_result["metadata"]["agreement_score"]
+                participating_models = prediction_result["metadata"]["participating_models"]
+            except Exception as e:
+                print(f"Prediction error at test sample {idx}: {e}")
+                predicted_state = enhanced_to_display_state(enhanced_current_state)
+                agreement_score = 0.0
+                participating_models = []
+            
+            # Calculate metrics
+            reg_sim = register_similarity(expected_next_state, predicted_state)
+            weighted_sim = weighted_register_similarity(expected_next_state, predicted_state, 
+                                                      zero_weight=0.1, nonzero_weight=1.0)
+            exact_match = weighted_sim == 1.0
+            
+            if exact_match:
+                exact_match_count += 1
+            
+            results.append({
+                "index": idx,
+                "register_similarity": reg_sim,
+                "weighted_similarity": weighted_sim,
+                "exact_match": exact_match,
+                "agreement_score": agreement_score,
+                "participating_models": participating_models
+            })
+            
+            total_register_similarity += reg_sim
+            total_weighted_similarity += weighted_sim
+        
+        # Calculate final metrics
+        avg_register_similarity = total_register_similarity / len(test_df)
+        avg_weighted_similarity = total_weighted_similarity / len(test_df)
+        exact_match_accuracy = (exact_match_count / len(test_df)) * 100
+        
+        # Print results
+        print(f"\n✅ ENSEMBLE EVALUATION COMPLETE!")
+        print("=" * 60)
+        print(f"📊 Test Results:")
+        print(f"   Average Register Similarity: {avg_register_similarity:.4f}")
+        print(f"   Average Weighted Similarity: {avg_weighted_similarity:.4f}")
+        print(f"   Exact Match Accuracy: {exact_match_accuracy:.2f}%")
+        print(f"   Exact Matches: {exact_match_count}/{len(test_df)}")
+        
+        metrics = {
+            "avg_register_similarity": avg_register_similarity,
+            "avg_weighted_similarity": avg_weighted_similarity,
+            "exact_match_accuracy": exact_match_accuracy,
+            "exact_match_count": exact_match_count,
+            "total_samples": len(test_df)
+        }
+        
+        return results, metrics
+    
+    def _print_state_summary(self):
+        """Print current state with temporal information"""
+        print("\n📊 CURRENT STATE (with temporal tracking)")
+        print("=" * 60)
+        
+        # Show active registers
+        active_regs = [(i, reg) for i, reg in self.current_state["holding_registers"].items() 
+                      if reg["value"] != 0 or reg["total_changes"] > 0]
+        
+        if active_regs:
+            print("📈 Holding Registers:")
+            print("Reg | Value | Last Changed (s) | Total Changes")
+            print("-" * 45)
+            for i, reg in active_regs[:10]:  # Show first 10
+                print(f"HR{i:02d} | {reg['value']:5d} | {reg['last_changed']:12d} | {reg['total_changes']:5d}")
+            if len(active_regs) > 10:
+                print(f"... and {len(active_regs) - 10} more active registers")
+        else:
+            print("📈 Holding Registers: All zero, no changes")
+        
+        # Show active coils
+        active_coils = [(i, coil) for i, coil in self.current_state["coils"].items() 
+                       if coil["value"] != 0 or coil["total_changes"] > 0]
+        
+        if active_coils:
+            print("\n⚡ Coils:")
+            print("Coil | Value | Last Changed (s) | Total Changes")
+            print("-" * 45)
+            for i, coil in active_coils:
+                print(f"C{i:02d}  | {coil['value']:5d} | {coil['last_changed']:12d} | {coil['total_changes']:5d}")
+        else:
+            print("⚡ Coils: All zero, no changes")
+    
+    def _print_prediction_metadata(self, metadata):
+        """Print prediction metadata"""
+        print(f"\n🎯 Prediction Metadata:")
+        print(f"   Models: {', '.join(metadata['participating_models'])}")
+        print(f"   Agreement: {metadata['agreement_score']:.2f}")
+        print(f"   Processing Time: {metadata['processing_time']:.3f}s")
+        print(f"   Method: {metadata['consensus_method']}")
+    
     def get_ensemble_status(self) -> Dict:
         """Get current ensemble system status"""
         active_models = self.store.get_active_models()
@@ -336,7 +544,7 @@ class EnsembleOrchestrator:
     
     def run_interactive_demo(self):
         """Run interactive demonstration of the ensemble system"""
-        print("\n🎭 ENSEMBLE PREDICTION SYSTEM DEMO")
+        print("\n🎭 ENSEMBLE PREDICTION SYSTEM")
         print("=" * 50)
         
         self.is_running = True
@@ -346,7 +554,7 @@ class EnsembleOrchestrator:
             while True:
                 print("\nOptions:")
                 print("1. Test prediction with sample state")
-                print("2. Test prediction with custom state")
+                print("2. Evaluate models with test data")
                 print("3. Show ensemble status")
                 print("4. Show model performance")
                 print("5. Quit")
@@ -354,9 +562,9 @@ class EnsembleOrchestrator:
                 choice = input("\nEnter choice (1-5): ").strip()
                 
                 if choice == "1":
-                    self._demo_sample_prediction()
+                    self._demo_interactive_prediction()
                 elif choice == "2":
-                    self._demo_custom_prediction()
+                    self._demo_test_data_evaluation()
                 elif choice == "3":
                     self._demo_ensemble_status()
                 elif choice == "4":
@@ -371,11 +579,14 @@ class EnsembleOrchestrator:
         finally:
             self.stop()
     
-    def _demo_sample_prediction(self):
-        """Demo with predefined sample states"""
-        scenarios = ["normal", "complex", "sparse"]
+    def _demo_interactive_prediction(self):
+        """Interactive prediction loop with temporal advancement"""
+        print("\n🎯 INTERACTIVE PREDICTION")
+        print("=" * 40)
         
-        print("\nSample scenarios:")
+        # Choose scenario
+        scenarios = ["normal", "complex", "sparse"]
+        print("Available scenarios:")
         for i, scenario in enumerate(scenarios, 1):
             print(f"{i}. {scenario.capitalize()}")
         
@@ -383,82 +594,71 @@ class EnsembleOrchestrator:
             choice = int(input("Choose scenario (1-3): ")) - 1
             if 0 <= choice < len(scenarios):
                 scenario = scenarios[choice]
-                test_state = create_test_state(scenario)
+                self.initialize_demo_state(scenario)
                 
-                # Convert to enhanced state format
-                enhanced_state = self.store.create_enhanced_state(
-                    {i: {"value": v, "last_changed": 0, "change_count": 0} 
-                     for i, v in test_state["holding_registers"].items()},
-                    {i: {"value": v, "last_changed": 0, "change_count": 0} 
-                     for i, v in test_state["coils"].items()},
-                    current_time=1000
-                )
-                
-                print(f"\n📊 Input State ({scenario}):")
-                print(format_state_for_display(test_state))
-                
-                print("\n🔄 Running ensemble prediction...")
-                result = self.predict_next_state(enhanced_state)
-                
-                print("\n📈 Ensemble Result:")
-                print(format_state_for_display(result["consensus_state"]))
-                
-                metadata = result["metadata"]
-                print(f"\n📋 Metadata:")
-                print(f"   Models: {', '.join(metadata['participating_models'])}")
-                print(f"   Agreement: {metadata['agreement_score']:.2f}")
-                print(f"   Time: {metadata['processing_time']:.3f}s")
-                print(f"   Method: {metadata['consensus_method']}")
-                
+                # Interactive prediction loop
+                while True:
+                    print("\n" + "-" * 50)
+                    print("Options:")
+                    print("1. Predict next state")
+                    print("2. Predict with time delay")
+                    print("3. Return to main menu")
+                    
+                    pred_choice = input("Enter choice (1-3): ").strip()
+                    
+                    if pred_choice == "1":
+                        print("\n🔄 Predicting next state...")
+                        self.predict_next_state_with_temporal_update()
+                    elif pred_choice == "2":
+                        try:
+                            delay = int(input("Enter delay in seconds (1-10): "))
+                            if 1 <= delay <= 10:
+                                print(f"\n🔄 Predicting next state with {delay}s delay...")
+                                self.predict_next_state_with_temporal_update(delay_seconds=delay)
+                            else:
+                                print("Invalid delay. Please enter 1-10 seconds.")
+                        except ValueError:
+                            print("Invalid input. Please enter a number.")
+                    elif pred_choice == "3":
+                        break
+                    else:
+                        print("Invalid choice.")
+                        
         except (ValueError, IndexError):
-            print("Invalid choice")
+            print("Invalid scenario choice")
     
-    def _demo_custom_prediction(self):
-        """Demo with custom state input"""
-        print("\nEnter custom state (simplified):")
+    def _demo_test_data_evaluation(self):
+        """Evaluate ensemble on test data"""
+        print("\n📊 TEST DATA EVALUATION")
+        print("=" * 40)
+        
         try:
-            # Simple input for demo
-            reg_input = input("Non-zero registers (format: reg1:val1,reg2:val2): ").strip()
-            coil_input = input("Non-zero coils (format: coil1:val1,coil2:val2): ").strip()
+            test_rows = int(input("Enter number of test rows (default 1000): ") or "1000")
+            if test_rows < 100:
+                test_rows = 100
+                print(f"Minimum 100 rows required. Using {test_rows} rows.")
+            elif test_rows > 5000:
+                test_rows = 5000
+                print(f"Maximum 5000 rows allowed. Using {test_rows} rows.")
             
-            # Parse input
-            test_state = {
-                "holding_registers": {i: 0 for i in range(39)},
-                "coils": {i: 0 for i in range(19)}
-            }
+            results, metrics = self.evaluate_ensemble_on_test_data(test_rows=test_rows)
             
-            if reg_input:
-                for pair in reg_input.split(","):
-                    if ":" in pair:
-                        reg, val = pair.split(":")
-                        test_state["holding_registers"][int(reg)] = int(val)
-            
-            if coil_input:
-                for pair in coil_input.split(","):
-                    if ":" in pair:
-                        coil, val = pair.split(":")
-                        test_state["coils"][int(coil)] = int(val)
-            
-            # Convert to enhanced state
-            enhanced_state = self.store.create_enhanced_state(
-                {i: {"value": v, "last_changed": 0, "change_count": 0} 
-                 for i, v in test_state["holding_registers"].items()},
-                {i: {"value": v, "last_changed": 0, "change_count": 0} 
-                 for i, v in test_state["coils"].items()},
-                current_time=1000
-            )
-            
-            print("\n📊 Input State:")
-            print(format_state_for_display(test_state))
-            
-            print("\n🔄 Running ensemble prediction...")
-            result = self.predict_next_state(enhanced_state)
-            
-            print("\n📈 Ensemble Result:")
-            print(format_state_for_display(result["consensus_state"]))
-            
+            if results:
+                print("\n📈 Additional Statistics:")
+                avg_agreement = sum(r["agreement_score"] for r in results) / len(results)
+                print(f"   Average Model Agreement: {avg_agreement:.3f}")
+                
+                # Model participation
+                all_models = set()
+                for r in results:
+                    all_models.update(r["participating_models"])
+                print(f"   Models Participated: {', '.join(sorted(all_models))}")
+                
+        except ValueError:
+            print("Invalid input. Using default 1000 test rows.")
+            self.evaluate_ensemble_on_test_data(test_rows=1000)
         except Exception as e:
-            print(f"Error processing input: {e}")
+            print(f"Evaluation failed: {e}")
     
     def _demo_ensemble_status(self):
         """Show ensemble system status"""

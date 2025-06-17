@@ -41,31 +41,34 @@ class StateStore:
                 json.dump(data, f, indent=2)
     
     def create_enhanced_state(self, holding_registers: Dict, coils: Dict, current_time: int = 0) -> Dict:
-        """Create enhanced state with temporal information"""
+        """
+        FIXED: Create enhanced state with proper temporal information
+        Now uses real seconds for temporal tracking
+        """
         enhanced_state = {
             "holding_registers": {},
             "coils": {},
             "metadata": {
                 "timestamp": time.time(),
-                "sequence_id": current_time
+                "sequence_id": current_time  # Keep for backward compatibility
             }
         }
         
         # Enhanced holding registers with temporal info
         for i in range(39):
             reg_data = holding_registers.get(i, {"value": 0, "last_changed": 0, "change_count": 0})
-            enhanced_state["holding_registers"][i] = {
+            enhanced_state["holding_registers"][str(i)] = {
                 "value": reg_data["value"],
-                "last_changed_seconds": current_time - reg_data.get("last_changed", 0),
+                "last_changed_seconds": reg_data.get("last_changed", 0),  # FIXED: Use actual seconds
                 "total_changes": reg_data.get("change_count", 0)
             }
         
         # Enhanced coils with temporal info  
         for i in range(19):
             coil_data = coils.get(i, {"value": 0, "last_changed": 0, "change_count": 0})
-            enhanced_state["coils"][i] = {
+            enhanced_state["coils"][str(i)] = {
                 "value": coil_data["value"], 
-                "last_changed_seconds": current_time - coil_data.get("last_changed", 0),
+                "last_changed_seconds": coil_data.get("last_changed", 0),  # FIXED: Use actual seconds
                 "total_changes": coil_data.get("change_count", 0)
             }
             
