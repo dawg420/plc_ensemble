@@ -354,12 +354,15 @@ def log_ensemble_event(event_type, message, request_id=None):
     req_info = f"[{request_id[:8]}]" if request_id else ""
     print(f"[{timestamp}] {event_type} {req_info}: {message}")
 
+
 # Constants for the ensemble system
 ENSEMBLE_CONFIG = {
-    "max_prediction_timeout": 3.0,
+    "max_prediction_timeout": 20.0,
     "model_health_timeout": 5.0,
-    "cleanup_interval": 300.0,  # 5 minutes
+    "cleanup_interval": 300.0,
     "performance_window": 50,
     "min_models_for_consensus": 2,
-    "agreement_threshold": 0.7
+    "agreement_threshold": 0.7,
+    "wait_for_all_models": True,
+    "llm_timeout_multiplier": 1.5
 }

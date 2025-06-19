@@ -127,7 +127,7 @@ class EnsembleOrchestrator:
         log_ensemble_event("STARTUP", "Cleanup thread started")
     
     def predict_next_state(self, current_state: Dict, timeout: float = None) -> Dict:
-        """Main ensemble prediction method"""
+        """Main ensemble prediction method with fixed polling logic"""
         if timeout is None:
             timeout = ENSEMBLE_CONFIG["max_prediction_timeout"]
         
@@ -135,7 +135,13 @@ class EnsembleOrchestrator:
         request_id = self.store.publish_prediction_request(current_state, timeout)
         start_time = time.time()
         
-        log_ensemble_event("PREDICTION", f"Ensemble prediction started (timeout: {timeout}s)", request_id)
+        # FIXED: Capture active models at start and don't change during polling
+        initial_active_models = self.store.get_active_models()
+        expected_count = len(initial_active_models)
+        
+        log_ensemble_event("PREDICTION", 
+            f"Ensemble prediction started (timeout: {timeout}s, expecting {expected_count} models: {initial_active_models})", 
+            request_id)
         
         # Wait for predictions with periodic polling
         predictions = {}
@@ -144,32 +150,73 @@ class EnsembleOrchestrator:
         
         for poll_count in range(max_polls):
             predictions = self.store.get_predictions(request_id)
+            received_count = len(predictions) if predictions else 0
+            elapsed = time.time() - start_time
             
+            # FIXED: Use initial_active_models, not fresh fetch
+            log_ensemble_event("POLLING_STATUS", 
+                f"Poll {poll_count}: {received_count}/{expected_count} models responded, {elapsed:.1f}s elapsed", 
+                request_id)
+            
+            # Debug: Show which models have responded
             if predictions:
-                active_models = self.store.get_active_models()
-                received_count = len(predictions)
-                expected_count = len(active_models)
-                
-                # Check if we have enough predictions
-                min_models = max(1, ENSEMBLE_CONFIG["min_models_for_consensus"])
+                responding_models = list(predictions.keys())
+                missing_models = [m for m in initial_active_models if m not in responding_models]
+                log_ensemble_event("POLLING_DETAIL", 
+                    f"Responding: {responding_models}, Missing: {missing_models}", 
+                    request_id)
+            
+            # Check if we have enough predictions
+            min_models = max(1, ENSEMBLE_CONFIG["min_models_for_consensus"])
+            
+            # OPTION 1: FORCE WAIT FOR ALL MODELS (recommended for LLM)
+            if ENSEMBLE_CONFIG.get("wait_for_all_models", True):
+                # Only proceed when ALL expected models have responded
+                if received_count >= expected_count and expected_count > 0:
+                    log_ensemble_event("CONSENSUS_TRIGGER", 
+                        f"All {expected_count} models responded - proceeding with consensus", 
+                        request_id)
+                    break
+                elif elapsed >= timeout * 0.95:  # Only exit at 95% of timeout
+                    log_ensemble_event("CONSENSUS_TRIGGER", 
+                        f"Timeout approaching ({elapsed:.1f}s) - proceeding with {received_count}/{expected_count} models", 
+                        request_id)
+                    break
+            
+            # OPTION 2: ORIGINAL LOGIC (faster but may exclude slow models)
+            else:
                 if received_count >= min_models:
-                    # Check if we should wait for more or proceed
-                    elapsed = time.time() - start_time
-                    
                     # Proceed if we have most models or significant time has passed
                     if (received_count >= expected_count * 0.8 or 
                         elapsed >= timeout * 0.7):
+                        log_ensemble_event("CONSENSUS_TRIGGER", 
+                            f"Proceeding with {received_count}/{expected_count} models (80% threshold or 70% timeout)", 
+                            request_id)
                         break
             
             time.sleep(poll_interval)
         
-        # Final prediction collection
+        # FIXED: Get final predictions with better error handling
         final_predictions = self.store.get_predictions(request_id)
         processing_time = time.time() - start_time
+        
+        # Debug the final state
+        if final_predictions:
+            log_ensemble_event("FINAL_PREDICTIONS", 
+                f"Collected {len(final_predictions)} predictions: {list(final_predictions.keys())}", 
+                request_id)
+        else:
+            log_ensemble_event("ERROR_DEBUG", 
+                f"No final predictions found. Expected: {initial_active_models}, Polling found: {received_count}", 
+                request_id)
         
         if not final_predictions:
             log_ensemble_event("ERROR", "No predictions received within timeout", request_id)
             return self._create_fallback_response(current_state, request_id, processing_time)
+        
+        log_ensemble_event("CONSENSUS_START", 
+            f"Starting consensus with {len(final_predictions)} predictions after {processing_time:.2f}s", 
+            request_id)
         
         # Generate consensus
         consensus_result = self._generate_consensus(final_predictions, current_state)
@@ -290,15 +337,15 @@ class EnsembleOrchestrator:
         """Initialize demo with proper temporal tracking"""
         scenarios = {
             "normal": {
-                "holding_registers": {0: 100, 1: 50, 5: 75},
+                "holding_registers": {0: 1, 1: 1, 5: 1},
                 "coils": {0: 1, 2: 1}
             },
             "complex": {
-                "holding_registers": {i: (i * 10) % 100 for i in range(10)},
+                "holding_registers": {i: i % 2 for i in range(10)},
                 "coils": {i: i % 2 for i in range(8)}
             },
             "sparse": {
-                "holding_registers": {15: 200, 30: 150},
+                "holding_registers": {15: 1, 30: 1},
                 "coils": {10: 1, 18: 1}
             }
         }
@@ -477,7 +524,7 @@ class EnsembleOrchestrator:
             print("📈 Holding Registers:")
             print("Reg | Value | Last Changed (s) | Total Changes")
             print("-" * 45)
-            for i, reg in active_regs[:10]:  # Show first 10
+            for i, reg in active_regs
                 print(f"HR{i:02d} | {reg['value']:5d} | {reg['last_changed']:12d} | {reg['total_changes']:5d}")
             if len(active_regs) > 10:
                 print(f"... and {len(active_regs) - 10} more active registers")

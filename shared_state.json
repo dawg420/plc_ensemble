@@ -1,28 +1,26 @@
 {
   "active_requests": {},
   "model_status": {
-    "xgboost": {
-      "status": "stopped",
-      "last_seen": 1750314253.7108243
-    }
-  },
-  "performance_history": []
-}",
-      "last_seen": 1750314253.3819253
-    },
-    "random_forest": {
-      "status": "stopped",
-      "last_seen": 1750314253.7106855
-    },
     "lstm": {
       "status": "active",
-      "last_seen": 1750314253.4241307
+      "last_seen": 1750328007.5022752
+    },
+    "hmm": {
+      "status": "active",
+      "last_seen": 1750328007.5194025
+    },
+    "xgboost": {
+      "status": "stopped",
+      "last_seen": 1750328007.981166
+    },
+    "random_forest": {
+      "status": "active",
+      "last_seen": 1750328007.4952888
     },
     "llm": {
       "status": "active",
-      "last_seen": 1750314252.7592828
+      "last_seen": 1750328007.9729187
     }
   },
   "performance_history": []
-}
-}
+}}

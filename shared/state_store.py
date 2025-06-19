@@ -50,7 +50,7 @@ class StateStore:
             "coils": {},
             "metadata": {
                 "timestamp": time.time(),
-                "sequence_id": current_time  # Keep for backward compatibility
+                "sequence_id": current_time
             }
         }
         
@@ -59,7 +59,7 @@ class StateStore:
             reg_data = holding_registers.get(i, {"value": 0, "last_changed": 0, "change_count": 0})
             enhanced_state["holding_registers"][str(i)] = {
                 "value": reg_data["value"],
-                "last_changed_seconds": reg_data.get("last_changed", 0),  # FIXED: Use actual seconds
+                "last_changed_seconds": reg_data.get("last_changed", 0),
                 "total_changes": reg_data.get("change_count", 0)
             }
         
@@ -68,7 +68,7 @@ class StateStore:
             coil_data = coils.get(i, {"value": 0, "last_changed": 0, "change_count": 0})
             enhanced_state["coils"][str(i)] = {
                 "value": coil_data["value"], 
-                "last_changed_seconds": coil_data.get("last_changed", 0),  # FIXED: Use actual seconds
+                "last_changed_seconds": coil_data.get("last_changed", 0),
                 "total_changes": coil_data.get("change_count", 0)
             }
             
@@ -187,19 +187,28 @@ class StateStore:
         
         return active_models
 
-# Utility functions for state conversion
+# FIXED: Utility functions for state conversion
 def enhanced_to_display_state(enhanced_state: Dict) -> Dict:
-    """Convert enhanced state to display format (no temporal info)"""
+    """Convert enhanced state to display format (no temporal info) - FIXED KEY TYPES"""
     display_state = {
         "holding_registers": {},
         "coils": {}
     }
     
+    # FIXED: Use string keys to match how enhanced_state is created
     for i in range(39):
-        display_state["holding_registers"][i] = enhanced_state["holding_registers"][i]["value"]
+        key = str(i)  # Convert to string to match enhanced state keys
+        if key in enhanced_state["holding_registers"]:
+            display_state["holding_registers"][i] = enhanced_state["holding_registers"][key]["value"]
+        else:
+            display_state["holding_registers"][i] = 0  # Default value
     
     for i in range(19):
-        display_state["coils"][i] = enhanced_state["coils"][i]["value"]
+        key = str(i)  # Convert to string to match enhanced state keys
+        if key in enhanced_state["coils"]:
+            display_state["coils"][i] = enhanced_state["coils"][key]["value"]
+        else:
+            display_state["coils"][i] = 0  # Default value
     
     return display_state
 
