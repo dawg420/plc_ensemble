@@ -764,7 +764,7 @@ def main():
         
         # Wait for models to be ready
         print("\n⏳ Waiting for models to initialize...")
-        time.sleep(5)
+        time.sleep(15)
         
         # Check which models are active
         active_models = orchestrator.store.get_active_models()

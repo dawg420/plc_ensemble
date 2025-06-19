@@ -19,7 +19,7 @@ from shared.utils import ModelTimer, safe_model_prediction, log_ensemble_event, 
 class LLMPredictorService:
     """LLM Model Prediction Service using Unsloth"""
     
-    def __init__(self, model_path="saved_models/state_model", 
+    def __init__(self, model_path="models/saved_models/state_model", 
                  store_path="shared_state.json"):
         self.model_name = "llm"
         self.model_path = model_path
