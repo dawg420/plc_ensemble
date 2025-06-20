@@ -1,26 +1,26 @@
 {
   "active_requests": {},
   "model_status": {
-    "lstm": {
+    "random_forest": {
       "status": "active",
-      "last_seen": 1750328007.5022752
+      "last_seen": 1750350950.6151893
     },
     "hmm": {
       "status": "active",
-      "last_seen": 1750328007.5194025
+      "last_seen": 1750350950.8114836
+    },
+    "lstm": {
+      "status": "active",
+      "last_seen": 1750350950.8572288
     },
     "xgboost": {
       "status": "stopped",
-      "last_seen": 1750328007.981166
-    },
-    "random_forest": {
-      "status": "active",
-      "last_seen": 1750328007.4952888
+      "last_seen": 1750350951.0619063
     },
     "llm": {
       "status": "active",
-      "last_seen": 1750328007.9729187
+      "last_seen": 1750350950.992529
     }
   },
   "performance_history": []
-}}
+}

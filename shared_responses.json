@@ -1,0 +1,6082 @@
+{
+  "responses": {
+    "cd56e7c5-ba6b-40df-a7aa-83b82fbbe0c6": {
+      "random_forest": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.5,
+        "processing_time": 0.05673074722290039,
+        "submitted_at": 1750446736.7133129
+      },
+      "xgboost": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "1": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.7,
+        "processing_time": 0.014897823333740234,
+        "submitted_at": 1750446736.728756
+      },
+      "hmm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.3,
+        "processing_time": 0.01217198371887207,
+        "submitted_at": 1750446736.7725031
+      },
+      "lstm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.6,
+        "processing_time": 0.5041828155517578,
+        "submitted_at": 1750446737.5055351
+      },
+      "llm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": 1,
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "coils": {
+            "0": 1,
+            "1": 0,
+            "2": 1,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          }
+        },
+        "confidence": 0.95,
+        "processing_time": 16.022758722305298,
+        "submitted_at": 1750446753.3830492
+      }
+    },
+    "b9543e76-cc4a-483f-a131-c76ee480fad7": {
+      "xgboost": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "25": {
+              "value": 1,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.7,
+        "processing_time": 0.01416921615600586,
+        "submitted_at": 1750446762.8167746
+      },
+      "random_forest": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.5,
+        "processing_time": 0.06782197952270508,
+        "submitted_at": 1750446762.8482533
+      },
+      "lstm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 0,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.6,
+        "processing_time": 0.16853070259094238,
+        "submitted_at": 1750446763.2494948
+      },
+      "llm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "coils": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          }
+        },
+        "confidence": 0.95,
+        "processing_time": 15.545927047729492,
+        "submitted_at": 1750446778.9549897
+      }
+    },
+    "06acc74d-11c2-4a0d-a5c5-7cb60b3f61e7": {
+      "xgboost": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "11": {
+              "value": 1,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "17": {
+              "value": 1,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.7,
+        "processing_time": 0.009943723678588867,
+        "submitted_at": 1750446790.424121
+      },
+      "hmm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "3": {
+              "value": 1,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "10": {
+              "value": 1,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.3,
+        "processing_time": 0.012007474899291992,
+        "submitted_at": 1750446790.4447954
+      },
+      "random_forest": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.5,
+        "processing_time": 0.04186248779296875,
+        "submitted_at": 1750446790.4860618
+      },
+      "lstm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 3,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 1,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.6,
+        "processing_time": 0.18277382850646973,
+        "submitted_at": 1750446791.0308633
+      },
+      "llm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "coils": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          }
+        },
+        "confidence": 0.95,
+        "processing_time": 15.437606573104858,
+        "submitted_at": 1750446806.4268556
+      }
+    },
+    "d7777cd9-a28f-4b59-9312-6cb0f707dc7e": {
+      "xgboost": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "33": {
+              "value": 1,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.7,
+        "processing_time": 0.009870529174804688,
+        "submitted_at": 1750446815.0408936
+      },
+      "hmm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "31": {
+              "value": 1,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.3,
+        "processing_time": 0.010610580444335938,
+        "submitted_at": 1750446815.0597622
+      },
+      "random_forest": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.5,
+        "processing_time": 0.04210019111633301,
+        "submitted_at": 1750446815.1305804
+      },
+      "lstm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.6,
+        "processing_time": 0.1439664363861084,
+        "submitted_at": 1750446815.272267
+      },
+      "llm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "coils": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          }
+        },
+        "confidence": 0.95,
+        "processing_time": 15.535691022872925,
+        "submitted_at": 1750446830.994046
+      }
+    },
+    "4d2a80e0-1b97-425c-937b-e32272e7fffa": {
+      "xgboost": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 1,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "23": {
+              "value": 1,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.7,
+        "processing_time": 0.010330438613891602,
+        "submitted_at": 1750446836.654849
+      },
+      "hmm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "31": {
+              "value": 1,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.3,
+        "processing_time": 0.013113737106323242,
+        "submitted_at": 1750446836.6764064
+      },
+      "random_forest": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.5,
+        "processing_time": 0.04503178596496582,
+        "submitted_at": 1750446836.7771537
+      },
+      "lstm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "19": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "20": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "21": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "22": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "23": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "24": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "25": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "26": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "27": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "28": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "29": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "30": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "31": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "32": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "33": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "34": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "35": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "36": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "37": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "38": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          },
+          "coils": {
+            "0": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "1": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "2": {
+              "value": 0,
+              "last_changed": 4,
+              "change_count": 1
+            },
+            "3": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "4": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "5": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "6": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "7": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "8": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "9": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "10": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "11": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "12": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "13": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "14": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "15": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "16": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "17": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            },
+            "18": {
+              "value": 0,
+              "last_changed": 2,
+              "change_count": 0
+            }
+          }
+        },
+        "confidence": 0.6,
+        "processing_time": 0.16760516166687012,
+        "submitted_at": 1750446837.0379477
+      },
+      "llm": {
+        "predicted_state": {
+          "holding_registers": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "coils": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          }
+        },
+        "confidence": 0.95,
+        "processing_time": 15.459776639938354,
+        "submitted_at": 1750446852.479487
+      }
+    }
+  },
+  "metadata": {
+    "created_at": 1750445765.8536036,
+    "total_responses": 24
+  }
+}

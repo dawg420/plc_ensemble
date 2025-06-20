@@ -15,7 +15,7 @@ import numpy as np
 # Add parent directory to path for imports
 sys.path.append(str(Path(__file__).parent.parent))
 
-from shared.state_store import StateStore
+from shared.distributed_state import DistributedStateStore
 from shared.utils import ModelTimer, safe_model_prediction, log_ensemble_event
 # Import shared model classes to ensure they're available for pickle
 from shared.model_classes import (
@@ -27,11 +27,11 @@ from shared.model_classes import (
 class MLPredictorService:
     """Generic ML Model Prediction Service"""
     
-    def __init__(self, model_type, model_path, store_path="shared_state.json"):
+    def __init__(self, model_type, model_path, base_dir="."):
         self.model_name = model_type.lower()
         self.model_type = model_type
         self.model_path = model_path
-        self.store = StateStore(store_path)
+        self.store = DistributedStateStore(base_dir)
         self.model = None
         self.is_running = False
         self.prediction_count = 0
@@ -249,23 +249,23 @@ class MLPredictorService:
 
 # Factory functions for each model type
 def run_xgboost_service(model_path="models/saved_models/xgboost_model.pkl", 
-                       store_path="shared_state.json"):
+                       base_dir="."):
     """Run XGBoost service"""
-    service = MLPredictorService("XGBoost", model_path, store_path)
+    service = MLPredictorService("XGBoost", model_path, base_dir)
     service.run_prediction_loop()
     return service
 
 def run_random_forest_service(model_path="models/saved_models/random_forest_model.pkl", 
-                             store_path="shared_state.json"):
+                             base_dir="."):
     """Run Random Forest service"""
-    service = MLPredictorService("Random_Forest", model_path, store_path)
+    service = MLPredictorService("Random_Forest", model_path, base_dir)
     service.run_prediction_loop()
     return service
 
 def run_lstm_service(model_path="models/saved_models/lstm_model.pkl", 
-                    store_path="shared_state.json"):
+                    base_dir="."):
     """Run LSTM service"""
-    service = MLPredictorService("LSTM", model_path, store_path)
+    service = MLPredictorService("LSTM", model_path, base_dir)
     service.run_prediction_loop(poll_interval=0.8)  # Slightly slower for LSTM
     return service
 
@@ -277,8 +277,8 @@ if __name__ == "__main__":
                        help="Type of ML model to run")
     parser.add_argument("--model_path", default=None,
                        help="Path to model file (auto-detected if not provided)")
-    parser.add_argument("--store_path", default="shared_state.json",
-                       help="Path to shared state file")
+    parser.add_argument("--base_dir", default=".",
+                   help="Base directory for distributed queue files")
     
     args = parser.parse_args()
     
@@ -290,7 +290,7 @@ if __name__ == "__main__":
     print("Press Ctrl+C to stop")
     
     try:
-        service = MLPredictorService(args.model_type.capitalize(), args.model_path, args.store_path)
+        service = MLPredictorService(args.model_type.capitalize(), args.model_path, args.base_dir)
         service.run_prediction_loop()
     except KeyboardInterrupt:
         print(f"\n👋 {args.model_type.upper()} service stopped by user")

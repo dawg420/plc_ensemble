@@ -15,7 +15,7 @@ import numpy as np
 # Add parent directory to path for imports
 sys.path.append(str(Path(__file__).parent.parent))
 
-from shared.state_store import StateStore
+from shared.distributed_state import DistributedStateStore
 from shared.utils import ModelTimer, safe_model_prediction, log_ensemble_event
 # Import the shared model class to ensure it's available for pickle
 from shared.model_classes import HMMStatePredictor
@@ -24,10 +24,10 @@ class HMMPredictorService:
     """HMM Model Prediction Service"""
     
     def __init__(self, model_path="models/saved_models/hmm_model.pkl", 
-                 store_path="shared_state.json"):
+                 base_dir="."):
         self.model_name = "hmm"
         self.model_path = model_path
-        self.store = StateStore(store_path)
+        self.store = DistributedStateStore(base_dir)
         self.model = None
         self.is_running = False
         self.prediction_count = 0
@@ -102,16 +102,16 @@ class HMMPredictorService:
         return confidence
     
     def process_prediction_request(self, request_data):
-        """Process a single prediction request"""
+        """Process a single prediction request - SIMPLIFIED"""
         request_id = request_data["request_id"]
         current_state = request_data["current_state"]
-        remaining_time = request_data["remaining_time"]
+        remaining_time = request_data.get("remaining_time", 0)
         
         if remaining_time <= 0:
             log_ensemble_event("TIMEOUT", f"Request expired before processing", request_id)
             return
         
-        log_ensemble_event("PROCESSING", f"HMM processing request", request_id)
+        log_ensemble_event("PROCESSING", f"HMM processing request from individual queue", request_id)
         
         with ModelTimer(self.model_name) as timer:
             try:
@@ -133,7 +133,7 @@ class HMMPredictorService:
                 # Calculate confidence
                 confidence = self._calculate_prediction_confidence(current_state, prediction)
                 
-                # Submit prediction to state store
+                # MODIFIED: Submit prediction to shared response file
                 processing_time = time.time() - timer.start_time
                 self.store.submit_prediction(
                     request_id=request_id,
@@ -144,7 +144,7 @@ class HMMPredictorService:
                 )
                 
                 self.prediction_count += 1
-                log_ensemble_event("SUCCESS", f"HMM prediction submitted (confidence: {confidence:.3f})\n Prediction: {prediction}", request_id)
+                log_ensemble_event("SUCCESS", f"HMM prediction submitted to shared responses (confidence: {confidence:.3f})", request_id)
                 
             except Exception as e:
                 log_ensemble_event("ERROR", f"HMM prediction error: {e}", request_id)
@@ -190,9 +190,9 @@ class HMMPredictorService:
         self.is_running = False
 
 def run_hmm_service_thread(model_path="models/saved_models/hmm_model.pkl", 
-                          store_path="shared_state.json"):
+                          base_dir="."):
     """Run HMM service in a separate thread"""
-    service = HMMPredictorService(model_path, store_path)
+    service = HMMPredictorService(model_path, base_dir)
     service.run_prediction_loop()
     return service
 

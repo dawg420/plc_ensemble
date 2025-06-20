@@ -16,7 +16,7 @@ import subprocess
 import json
 
 # Local imports
-from shared.state_store import StateStore, generate_state_output_summary, enhanced_to_display_state
+from shared.distributed_state import DistributedStateStore, generate_state_output_summary, enhanced_to_display_state
 from shared.consensus import AdaptiveConsensus, select_consensus_method
 from shared.temporal_state import TemporalStateManager
 from shared.utils import (
@@ -34,8 +34,13 @@ from shared.utils import (
 class EnsembleOrchestrator:
     """Main orchestrator for the ensemble prediction system with temporal tracking"""
     
-    def __init__(self, store_path="shared_state.json"):
-        self.store = StateStore(store_path)
+    def __init__(self, base_dir=".", model_names=None):
+        # MODIFIED: Use DistributedStateStore instead of StateStore
+        if model_names is None:
+            model_names = ["llm", "xgboost", "hmm", "lstm", "random_forest"]
+        
+        self.model_names = model_names
+        self.store = DistributedStateStore(base_dir, model_names)
         self.consensus_engine = AdaptiveConsensus()
         self.temporal_manager = TemporalStateManager()
         self.is_running = False
@@ -44,21 +49,17 @@ class EnsembleOrchestrator:
         self.cleanup_thread = None
         self.current_state = None
         
-        # Performance tracking
+        # Performance tracking (unchanged)
         self.ensemble_history = []
         self.model_performance = {
-            "llm": [],
-            "hmm": [],
-            "lstm": [],
-            "xgboost": [],
-            "random_forest": []
+            model: [] for model in model_names
         }
         
         # Setup signal handlers for graceful shutdown
         signal.signal(signal.SIGINT, self._signal_handler)
         signal.signal(signal.SIGTERM, self._signal_handler)
         
-        log_ensemble_event("STARTUP", "Ensemble Orchestrator initialized with temporal tracking")
+        log_ensemble_event("STARTUP", f"Ensemble Orchestrator initialized with distributed queues for {len(model_names)} models")
     
     def _signal_handler(self, signum, frame):
         """Handle shutdown signals gracefully"""
@@ -87,7 +88,7 @@ class EnsembleOrchestrator:
                     log_ensemble_event("ERROR", f"Failed to start {model_name}: {e}")
         
         # Wait for models to initialize
-        time.sleep(3)
+        time.sleep(15)
         active_models = self.store.get_active_models()
         log_ensemble_event("STARTUP", f"Active models: {active_models}")
     
@@ -112,39 +113,24 @@ class EnsembleOrchestrator:
         process = subprocess.Popen(cmd, cwd=Path.cwd())
         self.model_processes[model_name] = process
     
-    def start_cleanup_thread(self):
-        """Start cleanup thread for expired requests"""
-        def cleanup_worker():
-            while self.is_running:
-                try:
-                    self.store.cleanup_expired_requests(max_age=ENSEMBLE_CONFIG["cleanup_interval"])
-                    time.sleep(60)  # Cleanup every minute
-                except Exception as e:
-                    log_ensemble_event("ERROR", f"Cleanup error: {e}")
-        
-        self.cleanup_thread = threading.Thread(target=cleanup_worker, daemon=True)
-        self.cleanup_thread.start()
-        log_ensemble_event("STARTUP", "Cleanup thread started")
-    
     def predict_next_state(self, current_state: Dict, timeout: float = None) -> Dict:
-        """Main ensemble prediction method with fixed polling logic"""
+        """Main ensemble prediction method with distributed queues - IMPROVED MONITORING"""
         if timeout is None:
             timeout = ENSEMBLE_CONFIG["max_prediction_timeout"]
         
-        # Publish prediction request
+        # MODIFIED: Use distributed store for request publishing
         request_id = self.store.publish_prediction_request(current_state, timeout)
         start_time = time.time()
         
-        # FIXED: Capture active models at start and don't change during polling
+        # Get expected models at start (same as before)
         initial_active_models = self.store.get_active_models()
         expected_count = len(initial_active_models)
         
         log_ensemble_event("PREDICTION", 
-            f"Ensemble prediction started (timeout: {timeout}s, expecting {expected_count} models: {initial_active_models})", 
+            f"Distributed ensemble prediction started (timeout: {timeout}s, expecting {expected_count} models: {initial_active_models})", 
             request_id)
         
-        # Wait for predictions with periodic polling
-        predictions = {}
+        # ENHANCED: Monitor individual queue depths during polling
         poll_interval = 0.2
         max_polls = int(timeout / poll_interval)
         
@@ -153,7 +139,12 @@ class EnsembleOrchestrator:
             received_count = len(predictions) if predictions else 0
             elapsed = time.time() - start_time
             
-            # FIXED: Use initial_active_models, not fresh fetch
+            # ENHANCED: Show queue depths for better monitoring
+            if poll_count % 25 == 0:  # Every 5 seconds
+                queue_depths = self.store.queue_manager.get_queue_depths()
+                log_ensemble_event("QUEUE_MONITOR", 
+                    f"Queue depths: {queue_depths}", request_id)
+            
             log_ensemble_event("POLLING_STATUS", 
                 f"Poll {poll_count}: {received_count}/{expected_count} models responded, {elapsed:.1f}s elapsed", 
                 request_id)
@@ -166,27 +157,22 @@ class EnsembleOrchestrator:
                     f"Responding: {responding_models}, Missing: {missing_models}", 
                     request_id)
             
-            # Check if we have enough predictions
+            # Check if we have enough predictions (same logic as before)
             min_models = max(1, ENSEMBLE_CONFIG["min_models_for_consensus"])
             
-            # OPTION 1: FORCE WAIT FOR ALL MODELS (recommended for LLM)
             if ENSEMBLE_CONFIG.get("wait_for_all_models", True):
-                # Only proceed when ALL expected models have responded
                 if received_count >= expected_count and expected_count > 0:
                     log_ensemble_event("CONSENSUS_TRIGGER", 
                         f"All {expected_count} models responded - proceeding with consensus", 
                         request_id)
                     break
-                elif elapsed >= timeout * 0.95:  # Only exit at 95% of timeout
+                elif elapsed >= timeout * 0.95:
                     log_ensemble_event("CONSENSUS_TRIGGER", 
                         f"Timeout approaching ({elapsed:.1f}s) - proceeding with {received_count}/{expected_count} models", 
                         request_id)
                     break
-            
-            # OPTION 2: ORIGINAL LOGIC (faster but may exclude slow models)
             else:
                 if received_count >= min_models:
-                    # Proceed if we have most models or significant time has passed
                     if (received_count >= expected_count * 0.8 or 
                         elapsed >= timeout * 0.7):
                         log_ensemble_event("CONSENSUS_TRIGGER", 
@@ -196,11 +182,10 @@ class EnsembleOrchestrator:
             
             time.sleep(poll_interval)
         
-        # FIXED: Get final predictions with better error handling
+        # Get final predictions (same as before)
         final_predictions = self.store.get_predictions(request_id)
         processing_time = time.time() - start_time
         
-        # Debug the final state
         if final_predictions:
             log_ensemble_event("FINAL_PREDICTIONS", 
                 f"Collected {len(final_predictions)} predictions: {list(final_predictions.keys())}", 
@@ -218,16 +203,16 @@ class EnsembleOrchestrator:
             f"Starting consensus with {len(final_predictions)} predictions after {processing_time:.2f}s", 
             request_id)
         
-        # Generate consensus
+        # Generate consensus (unchanged)
         consensus_result = self._generate_consensus(final_predictions, current_state)
         
-        # Mark request as complete
+        # MODIFIED: Mark request complete in distributed store
         self.store.mark_request_complete(request_id, consensus_result)
         
-        # Track performance
+        # Track performance (unchanged)
         self._track_performance(final_predictions, consensus_result, processing_time)
         
-        # Prepare final response
+        # Prepare final response (unchanged)
         response = {
             "consensus_state": consensus_result["consensus_state"],
             "metadata": {
@@ -244,7 +229,7 @@ class EnsembleOrchestrator:
         self.prediction_count += 1
         
         log_ensemble_event("SUCCESS", 
-            f"Ensemble prediction complete ({len(final_predictions)} models, "
+            f"Distributed ensemble prediction complete ({len(final_predictions)} models, "
             f"agreement: {consensus_result['agreement_score']:.2f})", request_id)
         
         return response
@@ -524,7 +509,7 @@ class EnsembleOrchestrator:
             print("📈 Holding Registers:")
             print("Reg | Value | Last Changed (s) | Total Changes")
             print("-" * 45)
-            for i, reg in active_regs
+            for i, reg in active_regs:
                 print(f"HR{i:02d} | {reg['value']:5d} | {reg['last_changed']:12d} | {reg['total_changes']:5d}")
             if len(active_regs) > 10:
                 print(f"... and {len(active_regs) - 10} more active registers")
@@ -595,7 +580,6 @@ class EnsembleOrchestrator:
         print("=" * 50)
         
         self.is_running = True
-        self.start_cleanup_thread()
         
         try:
             while True:
@@ -655,6 +639,7 @@ class EnsembleOrchestrator:
                     
                     if pred_choice == "1":
                         print("\n🔄 Predicting next state...")
+                        time.sleep(3)
                         self.predict_next_state_with_temporal_update()
                     elif pred_choice == "2":
                         try:
