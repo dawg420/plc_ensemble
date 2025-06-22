@@ -42,9 +42,10 @@ def process_dataset_for_training(file_path, max_rows=20000):
     
     for idx, row in df.iterrows():
         # Use full features for training (includes temporal info for context)
+        update_state_with_transaction(row, idx, holding_registers, coils)
         current_state_features = state_to_features_for_training(holding_registers, coils, idx)
         state_sequence.append(current_state_features)
-        update_state_with_transaction(row, idx, holding_registers, coils)
+        
         
         if idx % 2000 == 0 and idx > 0:
             print(f"  Processed {idx} transactions...")

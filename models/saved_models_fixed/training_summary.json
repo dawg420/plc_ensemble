@@ -1,0 +1,22 @@
+{
+  "training_times": {
+    "hmm": 21.458849668502808,
+    "xgboost": 109.68821954727173,
+    "random_forest": 1.3546547889709473,
+    "lstm": 585.628143787384
+  },
+  "dataset_path": "modbus_output_with_time.csv",
+  "max_rows": 20000,
+  "train_split": 0.95,
+  "feature_dim_input": 174,
+  "output_dim": 58,
+  "models_trained": [
+    "hmm",
+    "xgboost",
+    "random_forest",
+    "lstm"
+  ],
+  "training_date": "2025-06-23 07:16:50",
+  "fixed_approach": true,
+  "notes": "Models predict values only, temporal metadata computed afterward"
+}
